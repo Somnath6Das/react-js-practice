@@ -19,7 +19,7 @@ function Home() {
     <div className="home">
     <BlogList blogs={blogs} title="All Blog" handleDelete={handleDelete}/>
     {/*this is in the box   === */}
-    {/* <BlogList blogs={blogs.filter((blog) => blog.author === 'somnath')} title="Som Blog"/> */}
+    <BlogList blogs={blogs.filter((blog) => blog.author === 'somnath')} title="Som Blog"/>
     </div>
   )
 }
