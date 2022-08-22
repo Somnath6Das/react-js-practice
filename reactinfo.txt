@@ -1,0 +1,49 @@
+
+
+ const title = 'Welcome to mojo blog';
+ const likes = 50;
+const Google = 'https://www.google.com'
+
+
+
+
+  <h1>{title}</h1>
+       <p>likes{ likes } times</p>
+      <p>{ 100 }</p>
+     <p>{ 'learning react flutter all day' }</p>
+       <p>{[1,2,3,4,5,6,7]}</p>
+       <p>{Math.floor(Math.random()*10)}</p>
+      <a href={Google}>Google</a> 
+
+ boolian and object could not output in the screen from jsx
+
+
+
+
+ # react snippet
+
+  1. sfc
+  2. rfce
+
+
+
+  //on click call a function with out parameter :
+    <button onClick={handleClickAgain}>click me again</button>
+
+
+  //on click  call a function with parameter:  annomous function:
+   <button onClick={ () => { handleClickAgain('somnath') }}>click me again</button>
+   or  
+   <button onClick={ () => handleClickAgain('somnath')}>click me again</button>
+
+  // this is not a proper way to call a function: it will auto call the function even without  clicking.
+    <button onClick={handleClickAgain()}>click me again</button>
+
+   const handleClick = (e) => {
+    name = 'Supriyo';
+    console.log('hello react', e);
+    }
+
+    const handleClickAgain = (name,e) => {
+    console.log('hello ' + name, e.timeStamp);
+    }
