@@ -47,3 +47,7 @@ const Google = 'https://www.google.com'
     const handleClickAgain = (name,e) => {
     console.log('hello ' + name, e.timeStamp);
     }
+
+
+    //to start json server 
+    npx json-server --watch data/db.json --port 8000

@@ -1,35 +1,15 @@
-import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
+import useFetch from './useFetch';
 
 function Home() {
-  const [ blogs, setBlog] = useState([
-    {title: 'My new Website', body: 'It going to build with react', author: 'somnath', id: 1},
-    {title: 'My already builded website', body: 'I have made with flutter', author: 'somnath', id: 2},
-    {title: 'My futute website', body: 'I would love to make with typescript and nextjs', author: 'NextSom', id: 3}
-  ]);
-
-  const [name, setName] = useState('okSom')
-
-
-  //  this is out of the box   !==
-  const handleDelete = (id) => {
-    const newBlogs = blogs.filter(blog => blog.id !== id)
-    setBlog(newBlogs);
-  }
-
-  //useEffect calls when the page rerender when the function not have arrey.
-  //[] empty arrey call the function once 
-  //if put any function in the arrey that function only run when that function clicked
-  useEffect(()=> {
-    console.log('use effect run');
-    console.log(name);
-  }, [name])
+  // react match json server 'http://localhost:8000/blogs'   to  'http://localhost:3000'   as a  home page  "/"   -> Home.js  and  App.js
+  const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs');
 
   return (
     <div className="home">
-    <BlogList blogs={blogs} title="All Blog" handleDelete={handleDelete}/>
-    <button onClick={()=> setName('goNinja')}>change name</button>
-    <p>{ name }</p>
+    { error && <div>{ error }</div>}
+    {isPending && <div>Loading...</div>}
+    {blogs && <BlogList blogs={blogs} title="All Blogs" />}
     </div>
   )
 }

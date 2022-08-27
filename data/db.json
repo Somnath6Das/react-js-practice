@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "My already builded website",
+      "body": "I have made with flutter",
+      "author": "somnath",
+      "id": 2
+    },
+    {
+      "title": "My futute website",
+      "body": "I would love to make with typescript and nextjs",
+      "author": "NextSom",
+      "id": 3
+    }
+  ]
+}
