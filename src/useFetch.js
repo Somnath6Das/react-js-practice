@@ -33,7 +33,7 @@ const useFetch = (url) => {
        return () => abortCont.abort()
       }, [url]);
 
-     // useEffect call when the page rerender and when the page not have array [].
+     // useEffect call when the page rerender and when not have array [].
      // [] empty array call the function once when the page first render or manually reload.
      // If put any function in this array that function only run when ever that function is called.
 
