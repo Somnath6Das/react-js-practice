@@ -1,6 +1,6 @@
 import Home from './Home';
 import Navbar from './Navbar';
-// new version of react-router-dom package  Switch propertise is replace by Routes and syntex changes in jsx
+// new version of react-router-dom package  Switch properties is replace by Routes and syntex changes in jsx
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import Create from './Create';
 import BlogDetails from './BlogDetails';

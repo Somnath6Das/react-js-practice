@@ -8,7 +8,7 @@ function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/create" 
         // style={{color: "white",backgroundColor:'#0f6de9',borderRadius: '8px'}}
-        >NewBlog</Link>
+        >Create Blog</Link>
     </div>
 </nav>
   )

@@ -5,6 +5,7 @@ const useFetch = (url) => {
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
   
+   
 
     useEffect(()=> {
         const abortCont = new AbortController();
@@ -31,6 +32,10 @@ const useFetch = (url) => {
       //to stop fatch data before fetching and go to another page
        return () => abortCont.abort()
       }, [url]);
+
+     // useEffect call when the page rerender and when the page not have array [].
+     // [] empty array call the function once when the page first render or manually reload.
+     // If put any function in this array that function only run when ever that function is called.
 
       return { data, isPending, error}
 }
